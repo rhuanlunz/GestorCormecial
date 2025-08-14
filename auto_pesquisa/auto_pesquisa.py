@@ -1,10 +1,12 @@
-import tkinter as tk
-from tkinter import ttk, messagebox, filedialog
-import json
+from tkinter import Tk, ttk, messagebox, filedialog
 import xmltodict
-import os
+
 from datetime import datetime
 from collections import defaultdict
+
+import json
+import os
+
 
 # Dados globais
 dados_filtrados = []
@@ -130,7 +132,7 @@ def mostrar_info_produto_selecionado(event=None):
     label_valor_total.config(text=f"Total Vendido: R$ {soma_valor:.2f}")
 
 # Interface
-root = tk.Tk()
+root = Tk()
 root.title("Analisador de Vendas NFe - XML/JSON Multi Arquivo")
 root.geometry("1120x680")
 root.resizable(False, False)
